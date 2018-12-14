@@ -1,50 +1,30 @@
 class AuthActions {
 
-    static PHONE_NO_SENT = "PHONE_NO_SENT";
-    static PHONE_NO_SENT_SUCCESSFUL = "PHONE_NO_SENT_SUCCESSFUL";
-    static PHONE_NO_SENT_ERROR = "PHONE_NO_SENT_ERROR";
+    static AUTHENTICATION = "AUTHENTICATION";
+    static AUTHENTICATION_SUCCESSFUL = "AUTHENTICATION_SUCCESSFUL";
+    static AUTHENTICATION_FAILED = "AUTHENTICATION_FAILED";
 
-    static VERIFICATION_CODE_SENT = "VERIFICATION_CODE_SENT";
-    static VERIFICATION_CODE_SENT_SUCCESSFUL = "VERIFICATION_CODE_SENT_SUCCESSFUL";
-    static VERIFICATION_CODE_SENT_ERROR = "VERIFICATION_CODE_SENT_ERROR";
+
     
-    static  phoneNoSent(data){
+    static  authentication(data){
         return {
-            type : this.PHONE_NO_SENT,
+            type : this.AUTHENTICATION,
             data : data
         }
     }
-    static phoneNoSentSuccessul(data){
+    static authenticationSuccessul(data){
         return {
-            type : this.PHONE_NO_SENT_SUCCESSFUL,
+            type : this.AUTHENTICATION_SUCCESSFUL,
             data: data
         }
     }
-    static phoneNoSentError(data){
+    static authenticationFailed(data){
         return {
-            type : this.PHONE_NO_SENT_ERROR,
+            type : this.AUTHENTICATION_FAILED ,
             data: data
         }
     }
 
-    static  verificationCodeSent(data){
-        return {
-            type : this.VERIFICATION_CODE_SENT,
-            data : data
-        }
-    }
-    static verificationCodeSentSuccessul(data){
-        return {
-            type : this.VERIFICATION_CODE_SENT_SUCCESSFUL,
-            data: data
-        }
-    }
-    static verificationCodeSentError(data){
-        return {
-            type : this.VERIFICATION_CODE_SENT_ERROR,
-            data: data
-        }
-    }
 }
 
 export default AuthActions;
